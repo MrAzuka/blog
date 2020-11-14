@@ -1,31 +1,36 @@
 header {
     border-bottom: 1px solid #999;
-    margin-bottom: 2rem;
-    display: flex; 
+    margin-bottom: 2rem
 }
 
-header h1 a {
-    color: red
+h1 a {
+    color: red;
+    text-decoration-line: none;
 }
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 18px; 
+    font-size: 9vh;
 }
-
+.grid-container{
+     display: flex;
+     flex-direction: row;
+}
 .nav-left {
+    justify-self: flex-start;
     margin-right: auto;
+    text-decoration: none;
+    letter-spacing: 1vw;
  }
-
 .nav-right {
-    display: flex;
-    padding-top: 2rem; 
+justify-self: flex-end;
+ padding:5vh 3vw;
 } 
 .post-entry {
-    margin-bottom: 2rem; 
+    text-align: center;
 }
 .post-entry h2 {
-    margin: 0.5rem 0; 
+    
 }
 .post-entry h2 a, .post-entry h2 a:visited {
     color: blue;

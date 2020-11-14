@@ -1,24 +1,33 @@
 {% load static %}
 
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Blog</title>
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400" rel="stylesheet">
-    <link href="{% static 'css/base.css' %}" rel="stylesheet">
-</head>
-<body>
-<header>
-    <h1>
-        <a href="{% url 'home' %}">DJANGO BLOG</a>
-    </h1>
-</header>
-<div>
-    {% block content %}
+    <head>
+        <meta charset="UTF-8">
+        <title>Blog</title>
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400" rel="stylesheet">
+        <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <div>
 
-    {% endblock content %}
-</div>
+                <div class="grid-container">
+                    <div class="nav-left">
+                        <h1><a href="{% url 'home' %}">DJANGO BLOG</a></h1>
+                    </div>
 
-</body>
+
+                    <div class="nav-right" style="text-align:right">
+                        <h1><a href="{% url 'post_new' %}">+ NEW BLOG POST</a></h1>
+                    </div>
+                </div>
+
+
+
+
+            {% block content %}
+
+            {% endblock content %}
+        </div>
+
+    </body>
 </html>

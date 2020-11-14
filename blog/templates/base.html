@@ -1,23 +1,96 @@
-{% load static %}
+<!--{% load static %}-->
 
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>Blog</title>
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400" rel="stylesheet">
-        <link href="{% static 'css/base.css' %}" rel="stylesheet">
+        <style>
+            .container{
+                margin-left: 15vh;
+                margin-right: 15vh;
+                /* width: 100%; */
+                text-align: center;
+                font-family: 'Courier New', Courier, monospace;
+            }
+            .blog-link{
+                text-decoration: none;
+                font-size: 6vh;
+                color: black;
+                transition-timing-function: ease-in;
+                transition-delay: 1s;
+            }
+            .blog-link:hover{
+                transform: rotate(180deg);
+            }
+            .grid-container{
+                display: grid;
+                grid-template-columns: repeat(8, 1fr);
+            }
+            .nav-left{
+                grid-column: 1/3;
+            }
+            .nav-right{
+                grid-column: 6/-1;
+            }
+            .post-entry h2 a{
+                font-size: 4.5vh;
+                color: chocolate;
+                text-decoration: none;
+                letter-spacing: 1vh;
+            }
+            .post-entry p {
+                font-weight: bold;
+                font-size: large;
+            }
+            input{
+                color: black;
+                background-color: white;
+                border-radius: 10vh;
+                width: 45vh;
+                padding: 1vh 1vh;
+            }
+            input:hover{
+                color: white;
+                border-color: white;
+                background-color: black;
+            }
+            input::grammar-error{
+                color: red;
+            }
+            textarea{
+                background-color: white;
+                color: black;
+                border-radius: 5vh;
+
+
+            }
+            textarea:hover{
+                background-color: black;
+                color: white;
+            }
+            label{
+                font-size: large;
+                font-weight:bold;
+                text-transform: uppercase;
+            }
+            .submit{
+                
+            }
+            
+        </style>
     </head>
     <body>
-        <div>
+        <div class="container">
 
                 <div class="grid-container">
                     <div class="nav-left">
-                        <h1><a href="{% url 'home' %}">DJANGO BLOG</a></h1>
+                        <h1><a href="{% url 'home' %}" class="blog-link">DJANGO BLOG</a></h1>
                     </div>
 
 
-                    <div class="nav-right" style="text-align:right">
-                        <h1><a href="{% url 'post_new' %}">+ NEW BLOG POST</a></h1>
+                    <div class="nav-right">
+                        <h1><a href="{% url 'post_new' %}" class="blog-link">+ NEW BLOG POST</a></h1>
                     </div>
                 </div>
 

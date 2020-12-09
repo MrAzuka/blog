@@ -2,8 +2,8 @@
 
 {% block content %}
 {% for post in all_post_list %}
-<div class="post-entry">
-    <h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
+<div class="post-entry card">
+    <h2 class="card-title"><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
     <p>{{ post.article }}</p>
 </div>
 {% endfor %}
